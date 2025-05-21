@@ -1,0 +1,59 @@
+:root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary:rgb(234, 11, 11);
+    --primaryLight:rgb(255, 189, 67);
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(13px, 1.6vw, 16px);
+    /* 31px - 49px */
+    --headerFontSize: clamp(31px, 3.9vw, 49px);
+    --bodyFontSize: 16px;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(40px, 7.82vw, 80px) 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2 em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1 em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 19.2px;
+    text-align: inherit;
+    max-width: 700px;
+    margin: 0 0 16px 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 24px;
+    text-align: inherit;
+    width: 100%;
+    max-width: 650px;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
